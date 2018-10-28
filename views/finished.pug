@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .system
+    .theme
+      h3(style="color:lightgray") Tema:
+      h2= theme
+    .next
+
+  .writer
+    each textData in texts
+      h3= textData.author
+      p= textData.likes
+      p= textData.duration/1000
+      p= textData.text
